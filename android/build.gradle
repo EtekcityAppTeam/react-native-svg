@@ -13,7 +13,9 @@ buildscript {
 
     dependencies {
         //noinspection GradleDependency
-        classpath 'com.android.tools.build:gradle:2.2.3'
+//        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.1.4'
+
     }
 }
 
@@ -32,6 +34,20 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildTypes {
+        release {
+
+        }
+
+        debug {
+
+        }
+
+
+        releaseStaging {
+
+        }
+    }
 }
 
 repositories {
@@ -49,5 +65,5 @@ repositories {
 
 dependencies {
     //noinspection GradleDynamicVersion
-    implementation 'com.facebook.react:react-native:+'
+    api 'com.facebook.react:react-native:+'
 }
